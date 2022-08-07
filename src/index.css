@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+:root{
+  --primary-black: #000300;
+  --primary-green: #00df9a;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--primary-black);
+  overflow-x: hidden;
+}
+
+h1{
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+align-items: center;  flex-direction: column;
+}
+
+.typing-demo {
+  width: 21rem;
+  animation: typing 4s steps(19), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 1.45rem;
+  line-height: 1.7rem;
+  font-family: 'Black Han Sans', sans-serif;
+}
+button{
+  transition: 0.4s;
+}
+button:hover{
+  transform: scale(1.05);
+}
+
+.card-employee{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--primary-green)
+}
+
+@keyframes typing {
+  from {
+    width: 0px
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
